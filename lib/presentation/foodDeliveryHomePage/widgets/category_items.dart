@@ -29,7 +29,11 @@ class _CategoryItemsState extends State<CategoryItems> {
             final item = ComponentsConsts.categoryItems[index];
 
             return Padding(
-              padding: EdgeInsets.only(left: 25),
+              padding: EdgeInsets.only(
+                  left: 25,
+                  right: index == ComponentsConsts.categoryItems.length - 1
+                      ? 25
+                      : 0),
               child: GestureDetector(
                 onTap: () {
                   setState(() {
